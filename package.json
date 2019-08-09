@@ -1,0 +1,24 @@
+{
+  "name": "@erikkroes/mouse-trail",
+  "version": "0.0.1",
+  "description": "The most transparent way of adding space to your web page.",
+  "main": "mouse-trail.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikkroes/mouse-trail.git"
+  },
+  "keywords": [
+    "custom element",
+    "web components",
+    "mouse trail"
+  ],
+  "author": "Erik Kroes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erikkroes/mouse-trail/issues"
+  },
+  "homepage": "https://github.com/erikkroes/mouse-trail#readme",
+  "dependencies": {
+    "lit-element": "^2.2.1"
+  }
+}
