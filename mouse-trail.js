@@ -40,10 +40,10 @@ class MouseTrail extends LitElement {
   }
 
   render() {
-    if (this.banner) {    
+    if (this.banner) {   
       return html`
         ${this.particles.map((particle, i) => {
-          return html`<div class="particle" style="top: ${this.particles[i].y}px; left: ${this.particles[i].x}px;">${this.content[i]}</div>`
+          return html`<div class="particle" style="top: ${this.particles[i].y}px; left: ${this.particles[i].x}px;">${this.content[i]}</div>`;
         })}    
       `;  
     }
@@ -53,7 +53,7 @@ class MouseTrail extends LitElement {
           return html`<div class="particle" style="
             top: ${this.particles[i].y}px; 
             left: ${this.particles[i].x}px; 
-            ${this.particles[i].alpha ? `opacity: ${this.particles[i].alpha};` : ''}">${this.content}</div>`
+            ${this.particles[i].alpha ? `opacity: ${this.particles[i].alpha};` : ''}">${this.content}</div>`;
         })}
       `;    
       }
@@ -63,7 +63,8 @@ class MouseTrail extends LitElement {
     super.connectedCallback();
     if (this.banner) {
       this.count = this.content.length;  
-    } else { 
+    }
+    if (!this.drop) { 
       this.particles = Array.from({ length: this.count }, () => ({ x: 0, y: 0 }));
     }
   }
