@@ -47,7 +47,7 @@ class MouseTrail extends LitElement {
         })}    
       `;  
     }
-    else if (this.follow || this.drop) {    
+    else {    
       return html`
         ${this.particles.map((particle, i) => {
           return html`<div class="particle" style="
@@ -63,8 +63,7 @@ class MouseTrail extends LitElement {
     super.connectedCallback();
     if (this.banner) {
       this.count = this.content.length;  
-    }
-    if (this.banner || this.follow) { 
+    } else { 
       this.particles = Array.from({ length: this.count }, () => ({ x: 0, y: 0 }));
     }
   }
@@ -84,11 +83,10 @@ class MouseTrail extends LitElement {
   }
 
   _startParticles() {
-    if (this.banner || this.follow) {
-      window.setInterval(this._moveParticles.bind(this), 20);
-    }
-    else if (this.drop) {
+    if (this.drop) {
       window.setInterval(this._updateParticles.bind(this), 20);
+    } else {
+      window.setInterval(this._moveParticles.bind(this), 20);
     }
   }
 
