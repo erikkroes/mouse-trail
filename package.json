@@ -1,7 +1,7 @@
 {
   "name": "@erikkroes/mouse-trail",
   "version": "0.0.1",
-  "description": "The most transparent way of adding space to your web page.",
+  "description": "Party like it's 1999: add a trail to your mouse.",
   "main": "mouse-trail.js",
   "repository": {
     "type": "git",
@@ -10,7 +10,8 @@
   "keywords": [
     "custom element",
     "web components",
-    "mouse trail"
+    "mouse trail",
+    "geocities"
   ],
   "author": "Erik Kroes",
   "license": "MIT",
