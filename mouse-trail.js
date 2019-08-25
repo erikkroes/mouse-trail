@@ -35,6 +35,12 @@ class MouseTrail extends LitElement {
         .particle {
           position: absolute;
         }
+
+        @media (prefers-reduced-motion: reduce) {
+          .particle {
+            display: none;
+          }
+        }
       `,
     ];
   }
